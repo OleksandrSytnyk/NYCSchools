@@ -17,7 +17,6 @@ class MapViewController: UIViewController {
   var schools = [School]()
   var selectedSchoolIndex = 0
   var tappedPinHandler: ((Int) -> Void)?
-  var schoolDetailsHandler: ((String) -> Void)?
   
   var currentCenter: SchoolLocation? {
     guard !schools.isEmpty else {

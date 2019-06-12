@@ -59,7 +59,6 @@ class ContainerViewController: UIViewController {
         mapViewController.schools = schools
         mapViewController.setRegion()
       }
-      
       }, errorHandler: { [weak self] (errorMessage) in
         UIViewController.stopHUD()
         guard let strongSelf = self else { return }
@@ -75,8 +74,6 @@ class ContainerViewController: UIViewController {
       UIViewController.stopHUD()
       self?.schoolsViewController?.selectedSchoolDetails = school
       self?.schoolsViewController?.performSegue(withIdentifier: SchoolsViewController.showDetails, sender: self)
-      
-      self?.mapViewController?.schoolDetailsHandler?(school.dbn)
       }, errorHandler: { [weak self] (errorMessage) in
         UIViewController.stopHUD()
         guard let strongSelf = self else { return }
